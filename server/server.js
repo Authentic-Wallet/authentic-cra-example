@@ -59,6 +59,7 @@ app.post('/i-want-nft', async (req, res) => {
 
     return res.redirect(`${process.env.AUTHENTIC_WALLET_API}/rpc/session.execute/?session_token=${session}`)
   } catch (error) {
+
     // NOTE: the error comes with the session_token. So in theory you could just redirect to execution
     return res.status(500).send(error)
   }

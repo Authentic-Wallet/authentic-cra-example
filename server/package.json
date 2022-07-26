@@ -8,10 +8,16 @@
     "environ": "^3.0.3",
     "express": "^4.18.1"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "volta": {
     "node": "18.6.0"
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
   }
 }
