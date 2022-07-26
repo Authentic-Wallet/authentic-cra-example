@@ -1,32 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const API_URL = 'http://localhost:8000/api'
 
+
+function App() {
+  const [email, setEmail] = useState('')
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <article className='main-content'>
+        <h1>Vite + React (similar to create-react-app)</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Focus on how the AuthenticWallet API works for SPA applications. The SPA application needs a supporting backend to use the API.
         </p>
+        <p>
+          The methods that the needed backend uses for protecting itself against spam or other attacks are for the integrator to decide. At authentic we suggest using CSRFTokens + checking domain names and HTTPS connection.
+        </p>
+        <p>
+          Although the AuthenticWallet API can be used on an SPA application, it is not recommended. The API was designed with an SSR application in mind. Still, we are working to provide better support for SPAs and ways to mitigate unwanted mintings.
+        </p>
+      </article>
+      <div className="card">
+        <form action={`${API_URL}/i-want-nft`} method="GET">
+          <fieldset>
+            <label htmlFor="email-input">
+              Email to mint NFT to
+            </label>
+            <input id="email-input" name="customer_email" value={email} onChange={(e) => {
+              setEmail(e.target.value)
+            }} />
+            <button>
+              Redeem NFT
+            </button>
+          </fieldset>
+        </form>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }

@@ -39,3 +39,26 @@
 .read-the-docs {
   color: #888;
 }
+
+.main-content {
+  text-align: left;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+fieldset * {
+  margin-bottom: 0.5em;
+  self-align: flex-start;
+}
+
+fieldset input {
+  height: 24px;
+  font-size: 24px;
+  padding: 10px;
+}
