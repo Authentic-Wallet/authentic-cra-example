@@ -9,7 +9,8 @@
     "express": "^4.18.1"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "volta": {
     "node": "18.6.0"
