@@ -90,6 +90,6 @@ const defaultReceipt = {
       "shape": "Oval"
     },
     "ring_specification": "This is a cute ring. Is made of gold and rare-ores.",
-    "gia_report_number": "1231231231"
+    "gia_report_number": "2201990355"
   }
 }
