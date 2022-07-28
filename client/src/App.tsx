@@ -4,6 +4,7 @@ import './App.css'
 const API_URL = import.meta.env.VITE_API_URL + 'api'
 
 console.log(`Vite API URL: ${API_URL}`)
+console.log(`debug: ${import.meta.env}`)
 
 
 function App() {
